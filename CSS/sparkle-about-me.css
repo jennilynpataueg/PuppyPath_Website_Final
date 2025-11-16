@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'SourGummy-Bold';
-  src: url('/Fonts/Sour_Gummy/static/SourGummy-Bold.ttf');
+  src: url('../Fonts/Sour_Gummy/static/SourGummy-Bold.ttf');
 }
 
 @font-face {
   font-family: 'SourGummy-Light';
-  src: url(/Fonts/Sour_Gummy/static/SourGummy-Light.ttf);
+  src: url(../Fonts/Sour_Gummy/static/SourGummy-Light.ttf);
 }
 
 @font-face {
 font-family: 'SourGummy-Medium';
-src: url(/Fonts/Sour_Gummy/static/SourGummy-Medium.ttf);
+src: url(../Fonts/Sour_Gummy/static/SourGummy-Medium.ttf);
 }
 
 *{
