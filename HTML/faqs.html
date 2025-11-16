@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppy Path</title>
+    <link rel="shortcut icon" type="x-icon" href="/Pics/logoPuppyPath (1).png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="/CSS/faqs.css">
+
+</head>
+<body>
+    
+        <header>
+            <nav class="topnav">
+                    <a href="#" class="no-hover">
+                    <img src="/Pics/logo-text (1).png" alt="Logo" class="logo-PuppyPath">
+                    </a>
+                <a href="/HTML/homepage.html"><i class="fas fa-home"></i> Home</a>
+                
+                
+                <a href="/HTML/donate.html"><i class="fa fa-heart"></i> Donate</a>
+                <a class="active" href="#faq"> <i class="fas fa-question-circle"></i> FAQs</a>
+
+
+
+                <script>
+                    // Select all navigation links except those with class "no-active"
+                    const navLinks = document.querySelectorAll('.topnav a:not(.no-active, #logo, .no-hover)');
+                
+                    // Loop through each main navigation link
+                    navLinks.forEach(link => {
+                        link.addEventListener('click', function() {
+                            // Remove the active class from all links
+                            navLinks.forEach(nav => nav.classList.remove('active'));
+                            // Add the active class only to the clicked main link
+                            this.classList.add('active');
+                        });
+                    });
+                </script>
+                
+
+
+                <div class="container-adopt-surren">
+                    <a href="/HTML/dogs-selection.html" class="btnAdopt btn1">Adopt</a>
+                    <a href="/HTML/surrender-form.html" class="btnSurrender btn2">Surrender</a>
+                </div>
+
+                <div class="search-icon">
+                    <a href="#search" class="search-icon no-hover"><i class="fas fa-search"></i></a>
+                </div>
+
+                <div class="account-icon">
+                    <a href="login.html" class="account-icon no-hover"><i class="fas fa-user-circle"></i></a>
+                </div>
+
+            </nav>
+        </header>
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>FAQ's-PuppyPath</title>
+        </head>
+            <link rel="stylesheet" href="/CSS/faqs.css">
+        <body>
+          
+            <div class="faqs-container">
+                <!-- Centered Row (FAQ Title or Heading) -->
+                <div class="faq-title">
+                  <h1>Frequently Asked Questions</h1>
+                </div>
+        
+        
+                <div class="banner">
+                    <img src="/Pics/faqbanner.png">
+                    <div class="banner-text"><h3>ADOPTION & SURRENDERING:</h3></div> <!-- Add your text here -->
+                </div>
+              
+                <!-- Two Columns Below (FAQ Questions and Answers) -->
+                <div class="faq-columns">
+                  <!-- Column 1 -->
+                  <div class="faq-column">
+                    <div class="faq-row">
+                      <h3 class="question">How do I adopt a Dog from Puppy Path?</h3>
+                      <button class="show-answer">Show Answer</button>
+                      <p class="answer">Answer: After choosing from our selection of very 
+                        lovely dogs, rescued or otherwise surrendered, 
+                        applicants are required to fill-up our adoption 
+                        form and attend a scheduled screening Interview 
+                        via Zoom that will determine your credibility 
+                        to adopt one of our sweet dogs. Once we have 
+                        approved of your case, 2-3 visits to our shelter 
+                        to meet and get to know your chosen furry 
+                        partner are required before you can bring them 
+                        home.</i></p>
+                    </div>
+                    <div class="faq-row">
+                      <h3 class="question">Can my Adoption Application be denied?</h3>
+                      <button class="show-answer">Show Answer</button>
+                      <p class="answer">Answer: Yes. One’s application form can be denied 
+                        during any step of the process due to various 
+                        reasons, such as being unable to keep their dog
+                        indoors, incompatibility with the household, and 
+                        other factors and cases that that may cause 
+                        damage to our dog’s health, safety, and 
+                        happiness.</i></p>
+                    </div>
+                    <div class="faq-row">
+                      <h3 class="question">Can I Return my Adopted Pet if I change my Mind?</h3>
+                      <button class="show-answer">Show Answer</button>
+                      <p class="answer">Answer: Owning a pet itself is a lifetime commitment and 
+                        should not be taken lightly with little thought.
+                         However if you really cannot keep your pet, 
+                         do not just abandon them and instead just 
+                         return them to our shelter.</i></p>
+                    </div>
+                  </div>
+              
+                  <!-- Column 2 -->
+                  <div class="faq-column">
+                    <div class="faq-row">
+                      <h3 class="question">Do you have any Purebred Dogs?</h3>
+                      <button class="show-answer">Show Answer</button>
+                      <p class="answer">Answer: It is very rare that purebred dogs 
+                        are admitted to the shelter. Sadly, they are 
+                        valued more than aspins who are equally 
+                        deserving of a home. Please consider adopting 
+                        a local breed instead.</i></p>
+                    </div>
+                    <div class="faq-row">
+                      <h3 class="question">I live in the Province/Abroad, Can I still Adopt?</h3>
+                      <button class="show-answer">Show Answer</button>
+                      <p class="answer">Answer: Yes, but special arrangements 
+                        need to be made for the meet-and-greet, 
+                        depending on your location. Please contact 
+                        us to discuss your options. You may also 
+                        opt to adopt from your local pound instead.</i></p>
+                    </div>
+                    <div class="faq-row">
+                      <h3 class="question">
+                        How do I surrender my dog for Relocaton?
+                        </h3>
+                        <button class="show-answer">Show Answer</button>
+                        <p class="answer">Answer: Home relocation is a more delicate process and will require a much more meticulous consideration.
+                         After the applicants have both filled-out the
+                          owner’s and pet’s application, a scheduled 
+                          face-to-face screening will be held at our 
+                          main office, as well as a conducting a 
+                          thorough background check and scheduled pet 
+                          check-up which you will present to us. 
+                          In the event that the applicant has passed 
+                          all requirements, only then will their canine
+                           be handed over to our care for home 
+                           relocation(adoption).</i></p>
+                           
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="dog_overlay">
+                <img src="/Pics/big_paw.png" alt="dogs">
+              </div>
+        
+              <script src="/JAVASCRIPT/faqs.js"></script>
+           
+        </body>
+        </html>
+
+    
+    <footer class="footer">
+        <div class="footer-content">
+            
+            <div class="footer-section-1">
+                <p>Sign up to stay in the loop on adoptable dogs and special updates.</p>
+
+                <form class="signup-form">
+                    <input type="email" id="email" name="email" required placeholder="Email">
+        
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+
+            
+            <div class="footer-section-2">
+                <a href="#" class="logo-footer"><img src="/Pics/logoPuppyPath (1).png" alt=""></a>
+                <p>
+                    Where paws find homes and hearts find joy                       
+                </p>
+            </div>
+
+
+
+            <div class="footer-section-3">
+                <i class="ri-instagram-fill"></i>
+                <i class="fab fa-tiktok"></i>
+                <i class="ri-facebook-fill"></i>
+                <p id="adopt-inquire">Adopt Inquiries</p>
+                <p id="surrender-pet">Surrender Inquiries</p>
+                <p id="customer-supp">Customer Support</p>
+                <p id="terms">Terms of Service</p>
+                <p id="policy">Privacy Policy</p>
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Puppy Path. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppy Path</title>
+    <link rel="shortcut icon" type="x-icon" href="/Pics/logoPuppyPath (1).png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="/CSS/donate.css">
+
+</head>
+<body>
+    
+        <header>
+            <nav class="topnav">
+                    <a href="#" class="no-hover">
+                    <img src="/Pics/logo-text (1).png" alt="Logo" class="logo-PuppyPath">
+                    </a>
+                <a href="/HTML/homepage.html"><i class="fas fa-home"></i> Home</a>
+                
+
+                
+                <a class="active" href="#donate"><i class="fa fa-heart"></i> Donate</a>
+                <a href="/HTML/faqs.html"> <i class="fas fa-question-circle"></i> FAQs</a>
+
+
+
+                <script>
+                    // Select all navigation links except those with class "no-active"
+                    const navLinks = document.querySelectorAll('.topnav a:not(.no-active, #logo, .no-hover)');
+                
+                    // Loop through each main navigation link
+                    navLinks.forEach(link => {
+                        link.addEventListener('click', function() {
+                            // Remove the active class from all links
+                            navLinks.forEach(nav => nav.classList.remove('active'));
+                            // Add the active class only to the clicked main link
+                            this.classList.add('active');
+                        });
+                    });
+                </script>
+                
+
+
+                <div class="container-adopt-surren">
+                    <a href="/HTML/dogs-selection.html" class="btnAdopt btn1">Adopt</a>
+                    <a href="/HTML/surrender-form.html" class="btnSurrender btn2">Surrender</a>
+                </div>
+
+                <div class="search-icon">
+                    <a href="#search" class="search-icon no-hover"><i class="fas fa-search"></i></a>
+                </div>
+
+                <div class="account-icon">
+                    <a href="login.html" class="account-icon no-hover"><i class="fas fa-user-circle"></i></a>
+                </div>
+
+            </nav>
+        </header>
+
+
+
+
+    <div class="donate-content">
+        <div>
+            <div class="donate-container">
+                <img class="dog-wallpaper" src="/Pics/donate-dog-wallpaper (1).jpg" alt="">
+                <div class="donate-text-title">“Be Their Hero Today”</div>
+                <div class="donate-text-p"><p>At <span class="highlight"> Puppy Path </span>, we believe that every dog <br>
+                    deserves a loving and safe home. Your <br>
+                    donation can help provide shelter, food, care, <br>
+                    and a chance for these dogs to find their <br>
+                    forever families. Even a small contribution <br>
+                    can make a big difference in giving them a <br>
+                    brighter future. <span class="highlight"> Join us in making a change <br>
+                    —donate now! </span> </p></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Thank You Popup -->
+<div id="thankYouPopup" class="thankYou">
+    <img src="/Pics/logoPuppyPath (1).png" alt="Thank You">
+    <h1>Thank You for Your Donation!</h1>
+    <p>Your generous donation is helping us make a difference for the dogs. We appreciate your support!</p>
+    <a href="javascript:void(0)" onclick="closeThankYouPopup()">Close</a>
+</div>
+
+<!-- Payment Platforms -->
+<div class="e-bank-container">
+    <p class="choose-bank">Choose a Bank or Payment Platform:</p>
+
+    <div class="image-container">
+        <img id="unionbank" src="/Pics/unionbank.png" alt="UnionBank" onclick="showThankYouPopup()">
+    </div>
+
+    <div class="image-container">
+        <img id="paymaya" src="/Pics/paymaya.png" alt="PayMaya" onclick="showThankYouPopup()">
+    </div>
+
+    <div class="image-container">
+        <img id="gcash" src="/Pics/gcash.png" alt="GCash" onclick="showThankYouPopup()">
+    </div>
+
+    <div class="image-container">
+        <img id="bdo" src="/Pics/bdo.png" alt="BDO" onclick="showThankYouPopup()">
+    </div>
+
+    <div class="image-container">
+        <img id="bpi" src="/Pics/bpi.png" alt="BPI" onclick="showThankYouPopup()">
+    </div>
+
+    <script>
+        function showThankYouPopup() {
+            const thankYouPopup = document.getElementById("thankYouPopup");
+            thankYouPopup.classList.add("show"); // Adds the class that shows the popup
+        }
+    
+        function closeThankYouPopup() {
+            const thankYouPopup = document.getElementById("thankYouPopup");
+            thankYouPopup.classList.remove("show"); // Removes the class to hide the popup
+        }
+    </script>
+    
+</div>
+
+
+
+
+
+
+
+
+    
+    <footer class="footer">
+        <div class="footer-content">
+            
+            <div class="footer-section-1">
+                <p>Sign up to stay in the loop on adoptable dogs and special updates.</p>
+
+                <form class="signup-form">
+                    <input type="email" id="email" name="email" required placeholder="Email">
+        
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+
+            
+            <div class="footer-section-2">
+                <a href="#" class="logo-footer"><img src="/Pics/logoPuppyPath (1).png" alt=""></a>
+                    <p>
+                        Where paws find homes and hearts find joy                       
+                    </p>
+            </div>
+
+
+
+            <div class="footer-section-3">
+                <i class="ri-instagram-fill"></i>
+                <i class="fab fa-tiktok"></i>
+                <i class="ri-facebook-fill"></i>
+                <p id="adopt-inquire">Adopt Inquiries</p>
+                <p id="surrender-pet">Surrender Inquiries</p>
+                <p id="customer-supp">Customer Support</p>
+                <p id="terms">Terms of Service</p>
+                <p id="policy">Privacy Policy</p>
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Puppy Path. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+
+
+
+</body>
+</html>

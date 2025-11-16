@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" type="x-icon" href="/Pics/logo-puppyPath(1).png">
+    <link rel="stylesheet" href="/CSS/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="/Logos/onsite.cal.png">
+
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display==swap");
+        
+        @font-face {
+            font-family: 'SourGummy-Bold' ;
+            src: url(/Fonts/Sour_Gummy/static/SourGummy-Bold.ttf);
+        }
+
+        @font-face {
+            font-family: 'SourGummy-Light' ;
+            src: url(/Fonts/Sour_Gummy/static/SourGummy-Light.ttf);
+        }
+
+        @font-face {
+            font-family: 'SourGummy-Medium' ;
+            src: url(/Fonts/Sour_Gummy/static/SourGummy-Medium.ttf);
+        }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(/Pics/homepage_gif.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper{
+    width: 500px;
+    border-radius: 10px;
+    height: 300px;
+    color: black;
+    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 800px;
+
+    
+}
+
+
+.wrapper h1 {
+    font-size: 66px;
+    text-align: center;
+    color: #e42e00;
+    font-family: 'SourGummy-Bold' ;
+    
+}
+.wrapper h3{
+    text-indent: 30px;
+    text-align: left;
+    color: white;
+    font-family: 'SourGummy-Medium' ;
+}
+
+.wrapper p{
+    text-indent: 30px;
+    text-align: left;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: white;
+    font-family: 'SourGummy-Light' ;
+}
+
+
+.input-box label[for="email"] {
+    background-color: transparent; /* Palitan ng kulay na gusto mo */
+    color: white;
+}
+
+
+.wrapper .input-box {
+    margin-top: 20px;
+    margin-left: 20px;
+    position: relative;
+    width: 90%;
+    height: 40px;
+    background: rgb(254, 254, 254);
+    
+    
+}
+.input-box label {
+    position: absolute;
+    top: -20px;
+    background: rgb(203, 206, 152);
+    padding: 0 5px;
+    font-size: small;
+    color: black;
+    background-color: rgb(213, 215, 179); /*"Email"*/
+    font-weight: bold;
+}
+.input-box input{
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(225, 225, 225, .2);
+    border-radius: 100px;
+    font-size: 14px;
+    color: black;
+    padding: 20px 45px 20px 20px;
+    width: 100%;
+}
+
+.wrapper .btn {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 90%;
+    height: 30px;
+    background: #e42e00bd;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #020202;
+    font-weight: 600;
+    font-family: 'SourGummy-Light' ;
+    transition: background-color 0.1s ease, color 0.1s ease;;
+
+}
+
+.wrapper .btn:hover {
+    background-color: #ff3c00d7;
+    color: white; 
+}
+
+.register-link, a {
+    font-family: 'SourGummy-Medium' ;   
+}
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+            <h1>Puppy Path</h1>
+            <h3>LOG IN</h3>
+            <p>Stay updated on our new adoptions, enter your email now!</p>
+            <div class="input-box">
+                <label for="email"><strong>Email</strong></label>
+                <input type="text">
+            </div>
+
+            <a href="/HTML/homepage.html">
+                <button type="submit" class="btn">CONTINUE</button>
+            </a>
+                       
+                <div class="register-link">
+                    <p>Dont have account? <a href="#">Register</a></p>
+                </div>        
+        
+            </div>
+        
+    </div>
+
+</body>
+</html>

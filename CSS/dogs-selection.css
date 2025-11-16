@@ -1,0 +1,570 @@
+@font-face {
+  font-family: 'SourGummy-Bold';
+  src: url('/Fonts/Sour_Gummy/static/SourGummy-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'SourGummy-Light';
+  src: url(/Fonts/Sour_Gummy/static/SourGummy-Light.ttf);
+}
+
+@font-face {
+font-family: 'SourGummy-Medium';
+src: url(/Fonts/Sour_Gummy/static/SourGummy-Medium.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    margin: 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.topnav {
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.10);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+/* Logo style */
+.logo-PuppyPath {
+    height: 50px;
+    width: auto;
+    pointer-events: none;
+}
+
+/* General link style */
+.topnav a {
+    display: block;
+    color: #1e4b57;
+    text-align: center;
+    padding: 14px 25px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "SourGummy-Bold", sans-serif;
+    height: 100%;
+    font-weight: bold;
+    line-height: 2;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover style for all links */
+.topnav a:hover:not(.no-hover, .btnSurrender, .btnAdopt){
+    background-color: #e42e00;
+    color: white; /* Ensure text is readable */
+}
+
+/* Style for active link */
+.topnav a.active {
+    background-color: #e42e00;
+    color: #ffffff;
+}
+
+/* Allow hover effect on the active link */
+.topnav a.active:hover {
+    background-color: #d12800; /* Slightly darker hover effect */
+    color: #ffffff; /* Keep text white */
+}
+
+
+.container-adopt-surren {
+    margin-left: 430px;
+    display: flex; /* Arrange child elements in a row */
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Add spacing between buttons */
+    margin-top: 0px; /* Add some spacing above */
+}
+
+.container-submit {
+  margin-left: 270px;
+  padding-top: 30px;
+}
+
+.container-submit .sbmtAdopt{
+  border: 2px solid #e42e00;
+  background: none;
+  text-decoration: none;
+  padding: 14px 22px;
+  font-weight: 500;
+  color: #1e4b57;
+  font-size: 20px;
+  border-radius: 7px;
+  transition: background-color 0.9s ease, color 0.7s ease, box-shadow 0.9s ease;;
+  cursor: pointer;
+  font-family: SourGummy-light;
+}
+
+.container-submit .sbmtAdopt:hover{
+  color: #ffffff;
+  background-color: #e42e00;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.514);
+  font-weight: 900;
+}
+
+.container-adopt-surren .btnAdopt {
+    position: relative;
+    border: 2px solid #e42e00;
+    background: none;
+    margin-left: 30px;
+    padding: 6px 25px;
+    font-weight: bolder;
+    color: #1e4b57;
+    font-size: 16px;
+    border-radius: 7px;
+    transition: color 0.4s linear;
+    cursor: pointer;
+    z-index: 1010;
+}
+
+.container-adopt-surren .btnAdopt:hover {
+    color: #ffffff;
+}
+
+.container-adopt-surren .btnAdopt::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #e42e00;
+    z-index: -1;
+    transition: transform 1.1s cubic-bezier(0.7, 1.6, 0.4, 0.7);
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.container-adopt-surren .btnAdopt:hover::before {
+    transform: scaleY(1);
+}
+
+.container-adopt-surren .btnSurrender {
+    position: relative;
+    border: 2px solid #e42e00;
+    background: none;
+    padding: 6px 9px;
+    font-weight: bolder;
+    color: #1e4b57;
+    font-size: 16px;
+    border-radius: 7px;
+    transition: color 0.4s linear;
+    cursor: pointer;
+    z-index: 1010;
+}
+
+.container-adopt-surren .btnSurrender:hover {
+    color: #ffffff;
+}
+
+.container-adopt-surren .btnSurrender::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #e42e00;
+    z-index: -1;
+    transition: transform 1.1s cubic-bezier(0.7, 1.6, 0.4, 0.7);
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.container-adopt-surren .btnSurrender:hover::before {
+    transform: scaleY(1);
+}
+
+
+.search-icon, 
+.account-icon {
+    display: inline-flex;
+    align-items: center;
+    padding: 0; /* Remove extra padding */
+    margin: 0;
+}
+
+.account-icon {
+    margin-left: -10px; /* Adjust to control the spacing */
+    margin-right: -5px;
+}
+
+.search-icon a, .account-icon a {
+    display: flex;
+    align-items: center;
+}
+
+
+.search-icon a i,
+.account-icon a i {
+    transition: all 0.3s linear;
+}
+
+
+.search-icon a:hover i,
+.account-icon a:hover i {
+    transform: scale(1.5);
+}
+
+
+
+.footer{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-top: 5px solid #e42e00;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0; 
+}
+
+.footer-section-1{
+  margin: 50px 0px 0px 66px;
+  font-size: 14px;
+  font-family: sourgummy-Light;
+  color: orangered;
+  font-weight: bolder;
+}
+
+.footer form{
+  display: flex;
+  align-items: center;
+}
+
+.footer form input{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 80%;
+  margin: 11px 5px 11px 0px;
+  transition: border-color 0.3s ease;
+}
+.footer form input:focus{
+  border: .5px solid #000000;
+  outline: none;
+}
+
+.footer form button{
+  border: 0px solid #ccc;
+  border-radius: 5px;
+  padding: 11px 10px 11px 10px;
+  background-color: #e42e0093;
+  color: white;
+  font-family: 'SourGummy-Light';
+  letter-spacing: 2px;
+  transition: transform 0.3s ease;
+}
+.footer form button:active{
+  transform: scale(0.95); 
+}
+
+
+.footer-section-2{
+  margin: 0px 30px 0px 136px;
+  font-family: sourgummy-Light;
+}
+
+.footer-section-2 .logo-footer img{
+  height: 100px;
+  width: auto;
+}
+.footer-section-2 p{
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: bold;
+  color: orangered;
+}
+
+
+.footer-section-3{
+  margin: 20px 0px 0px 110px;
+  font-size: 12px;
+}
+
+.footer-section-3  i{
+  font-size: 25px;
+  color: grey;
+  cursor: pointer;
+  letter-spacing: 13px;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+  margin-bottom: 2px;
+}
+
+.footer-section-3 .fa-tiktok{
+  font-size: 22px;
+  transform: translateY(-4px);
+  margin-left: 3px;
+}
+
+.ri-instagram-fill{
+  margin-left: 18px;
+}
+
+
+.footer-section-3 i:hover{
+  font-weight: bolder;
+  color: orangered;
+}
+
+.footer-section-3 p{
+  font-size: 14px;
+  font-weight: bold;
+  color: grey;
+  line-height: 2.4;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+  font-family: SourGummy-Light;
+}
+
+.footer-section-3 p:hover{
+  font-weight: bolder;
+  color: orangered; 
+}
+
+.footer-bottom {
+  margin: none;
+  text-align: center;
+  font-size: 12px;
+  margin-left: 76px;
+  margin-bottom: 10px;
+  font-family: SourGummy-Light;
+  font-weight: bold;
+
+}
+
+
+
+
+
+
+
+.bg-container {
+  background-color: #f1ded8;
+  max-width: 100%;
+  height: 100vh; /* Take up full viewport height */
+  display: flex;
+  position: relative;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 250px; /* Adjust height as needed */
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out; /* Adds smoothness to the swiper */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  flex-direction: column;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 14%; /* Adjust space between swiper container and slides */
+  position: relative; /* Allow absolute positioning for h3 and button */
+}
+
+/* Smaller image size */
+.swiper-slide img {
+  max-width: 70%; /* Limit image size to 70% */
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 5px; /* Reduce space between image and content */
+}
+
+/* Border effect for image when active */
+.swiper-slide-active img {
+  border: 3px solid #FF5733; /* Border color when active */
+}
+/* Blur effect for inactive slides */
+.swiper-slide img {
+  max-width: 70%; /* Limit image size */
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 5px; /* Reduce space between image and content */
+  transition: filter 0.3s ease; /* Smooth transition for the blur effect */
+}
+
+.swiper-slide:not(.swiper-slide-active) img {
+  filter: blur(5px); /* Apply blur effect */
+}
+
+.swiper-slide:not(.swiper-slide-active) h3 {
+  filter: blur(5px); /* Apply blur effect */
+}
+
+.swiper-slide:not(.swiper-slide-active) a {
+  filter: blur(5px); /* Apply blur effect */
+}
+
+/* Title Text (h3) Styling */
+.swiper-slide h3 {
+  position: absolute; /* Position text and button inside the image */
+  margin-top: 43%; /* Move the text closer to the image */
+  width: 100%; /* Take the full width */
+  color: #1e4b57; /* White text for contrast */
+  font-size: 2.8rem;
+  font-family: sourGummy-Bold, sans-serif;
+}
+
+/* Button Styling */
+.swiper-slide a {
+  position: absolute; /* Position text and button inside the image */
+  bottom: -90px; /* Place them towards the bottom of the image */
+  width: auto;
+  background-color: #FF5733; /* Orange-red background */
+  color: white; /* White text */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: sourGummy-Light, sans-serif;
+}
+
+/* Button hover effect */
+.swiper-slide a:hover {
+  background-color: #eb512e; /* Darker orange-red on hover */
+  font-weight: bolder;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.377);
+}
+
+/* Navigation Button Styling */
+.swiper-button-next, .swiper-button-prev {
+  color:#e42e00;
+  background:#e42e00;
+  border-radius: 18%;
+  background:#fff;
+  border: solid #e42e00 3px;
+  transition: all 0.15s ease;
+  padding: 10px;
+  width:50px;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  color:#fff;
+  background:#e42e00;
+  border-color: #fff; 
+}
+
+/* Make sure swiper buttons are visible */
+.swiper-button-next, .swiper-button-prev {
+  z-index: 10;
+}
+
+/* Optional: Style for responsiveness */
+@media (max-width: 768px) {
+  .swiper-slide img {
+      max-width: 80%; /* Adjust image size on smaller screens */
+  }
+}
+
+/* Targeting the images inside the swiper-slide */
+.swiper-slide img {
+  position: relative;  /* To ensure the shadow is positioned around the image */
+  border-radius: 10px; /* Optional: adds rounded corners to the image */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds a soft shadow around the image */
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow effect */
+}
+
+/* hover effect to make the shadow more intense when hovering over the image */
+.swiper-slide:hover img {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+}
+
+/* Pop effect for the left image - giving the illusion of lifting or moving forward */
+.swiper-slide.pop-left img {
+  transform: scale(1.1) translateY(-10px);  /* Scale and move the image slightly upward */
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);  /* Add shadow to simulate depth */
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;  /* Smooth transition */
+  z-index: 10;  /* Bring this image to the front */
+}
+
+/* Apply default transition to all images */
+.swiper-slide img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* apply a slight rotation effect if you want more depth */
+.swiper-slide.pop-left img {
+  transform: scale(1.1) translateY(-10px) rotate(3deg);  /* Slight rotation along with scaling */
+}
+
+/* For more depth */
+.swiper-container {
+  perspective: 1500px;  /* Adjust for more or less depth */
+}
+
+/* Add 3D rotation to the lifted image */
+.swiper-slide.pop-left img {
+  transform: scale(1.1) translateY(-10px) rotateY(10deg);  /* Rotate along the Y-axis */
+}
+
+/* Apply 3D perspective to the swiper container */
+.swiper-container {
+  perspective: 1500px;  /* Control the depth of the perspective */
+}
+
+/* Apply a 3D transformation to the individual slides */
+.swiper-slide {
+  transition: transform 0.5s ease;  /* Smooth transition for the 3D effect */
+  transform-style: preserve-3d;  /* Ensure 3D transformations are applied */
+}
+
+/* Add 3D rotation to the slides when they are not active */
+.swiper-slide:not(.swiper-slide-active) {
+  transform: rotateY(-30deg);  /* Rotate the slides away from the viewer */
+}
+
+/* Add 3D rotation to the active slide */
+.swiper-slide.swiper-slide-active {
+  transform: rotateY(0deg);  /* The active slide is facing forward */
+}
+
+/* Optional: Apply a perspective to the active slide to create a "curving" effect */
+.swiper-slide-active img {
+  transform: scale(1.1);  /* Slight scale-up effect on the active image */
+}
+
+/* Slight shadow to make the depth more pronounced */
+.swiper-slide img {
+  transition: box-shadow 0.3s ease;
+}
+
+.swiper-slide-active img {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);  /* Add a stronger shadow to the active slide */
+}

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppy Path</title>
+    <link rel="shortcut icon" type="x-icon" href="/Pics/logoPuppyPath (1).png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="/CSS/adopt-form.css">
+
+</head>
+<body>
+    
+    <header>
+        <nav class="topnav">
+            <a href="#" class="no-hover">
+            <img src="/Pics/logo-text (1).png" alt="Logo" class="logo-PuppyPath">
+            </a>
+        <a class="active" href="homepage.html"><i class="fas fa-home"></i> Home</a>
+        
+
+        
+        <a href="/HTML/donate.html"><i class="fa fa-heart"></i> Donate</a>
+        <a href="/HTML/faqs.html"> <i class="fas fa-question-circle"></i> FAQs</a>
+
+
+
+        <script>
+            // Get all nav links
+            const navLinks = document.querySelectorAll('.topnav a');
+        
+            // Get the current page's pathname
+            const currentPage = window.location.pathname;
+        
+            // Remove and add the active class dynamically
+            navLinks.forEach(link => {
+                // Compare link href with the current page
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        </script>
+           
+
+
+        <div class="container-adopt-surren">
+            <a href="/HTML/dogs-selection.html" class="btnAdopt btn1">Adopt</a>
+            <a href="/HTML/surrender-form.html" class="btnSurrender btn2">Surrender</a>
+        </div>
+
+        <div class="search-icon">
+            <a href="#search" class="search-icon no-hover"><i class="fas fa-search"></i></a>
+        </div>
+
+        <div class="account-icon">
+            <a href="login.html" class="account-icon no-hover"><i class="fas fa-user-circle"></i></a>
+        </div>
+
+    </nav>
+</header>
+
+
+<div class="form-content">
+    <div>
+        <table class="adopt-form">
+            <h3 class="title-adoptForm">Puppy Path Adoption Form</h3>
+            <tr>
+                <td colspan="2">
+                    <p>Name of the dog you wish to adopt:</p>
+                    <input type="text" id="dogName" placeholder="Enter dog's name">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p>Owner's Full Name: </p>
+                    <input type="text" id="ownerName" placeholder="Enter your full name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Owner's Birthdate:</p>
+                    <input type="date" id="birthdate">
+                </td>
+                <td>
+                    <p>Gender</p>
+                    <select id="gender">
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Address</p>
+                    <input type="text" id="address1" placeholder="House No./Street/Barangay"> <br>
+                    <input type="text" id="address2" placeholder="City">
+                </td>
+                <td>
+                    <p><br></p>
+                    <input type="text" id="state" placeholder="State/Province"> <br>
+                    <input type="number" id="zipCode" placeholder="Zip Code">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Contact No.</p>
+                    <input type="number" id="contactNo" placeholder="Enter your contact no.">
+                </td>
+                <td>
+                    <p>Email Address</p>
+                    <input type="email" id="email" placeholder="Enter your email address">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="vl"></div>
+
+    <div class="questionnaire-B">
+        <h3 class="questions-below">Kindly Answer the Questions below</h3>
+
+        <div>
+            <p>1. Do you currently have other pets? (if yes, please specify the type and number)</p>
+            <input type="radio" name="choice" value="yes" id="havePetsYes"> <label for="yes">Yes</label>
+            <input type="radio" name="choice" value="no" id="havePetsNo"> <label for="no">No</label>
+            <textarea id="petDetails" placeholder="Type here..."></textarea>
+        </div>
+
+        <div style="display: flex; gap: 26px; align-items: center;">
+            <div>
+                <p>2. Have you cared for a pet before?</p>
+                <input type="radio" name="choice1" value="yes" id="caredPetsYes"> <label for="yes">Yes</label>
+                <input type="radio" name="choice1" value="no" id="caredPetsNo"> <label for="no">No</label>
+            </div>
+
+            <div>
+                <p class="number3">3. Do you have a safe and secure space for a pet?</p>
+                <input type="radio" name="choice2" value="yes" id="safeSpaceYes"> <label for="yes">Yes</label>
+                <input type="radio" name="choice2" value="no" id="safeSpaceNo"> <label for="no">No</label>
+            </div>
+        </div>
+
+        <div>
+            <p>4. Why are you interested in adopting this pet? (please state your reason)</p>
+            <textarea id="adoptionReason" placeholder="Type here..."></textarea>
+        </div>
+
+        <div class="container-submit">
+            <button type="button" class="sbmtAdopt btn3" onclick="validateForm()">Submit</button>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+   <!-- Success Popup -->
+<div class="thankYou" id="popup">
+    <img src="/Pics/logoPuppyPath (1).png" alt="Logo">
+    <h1>Thank you!</h1>
+    <p>Your adoption was successful!</p>
+    <a href="/HTML/dogs-selection.html" onclick="closePopup()">Okay</a>
+</div>
+
+<!-- Error Popup -->
+<div class="errorPopup" id="errorPopup">
+    <h2>You Cannot Proceed!</h2>
+    <p id="errorMessage">Please fill out all required fields.</p>
+    <button onclick="closeErrorPopup()">Close</button>
+</div>
+
+<script>
+    let popup = document.getElementById("popup");
+    let errorPopup = document.getElementById("errorPopup");
+
+    // Open popup after successful form submission
+    function openPopup() {
+        popup.classList.add('show');
+    }
+
+    // Close success popup
+    function closePopup() {
+        popup.classList.remove('show');
+    }
+
+    // Close error popup
+    function closeErrorPopup() {
+        errorPopup.classList.remove('show');
+    }
+
+    // Form validation
+    function validateForm() {
+        // Get form values
+        let dogName = document.getElementById("dogName").value;
+        let ownerName = document.getElementById("ownerName").value;
+        let birthdate = document.getElementById("birthdate").value;
+        let gender = document.getElementById("gender").value;
+        let address1 = document.getElementById("address1").value;
+        let address2 = document.getElementById("address2").value;
+        let state = document.getElementById("state").value;
+        let zipCode = document.getElementById("zipCode").value;
+        let contactNo = document.getElementById("contactNo").value;
+        let email = document.getElementById("email").value;
+        let havePetsYes = document.getElementById("havePetsYes").checked;
+        let havePetsNo = document.getElementById("havePetsNo").checked;
+        let caredPetsYes = document.getElementById("caredPetsYes").checked;
+        let caredPetsNo = document.getElementById("caredPetsNo").checked;
+        let safeSpaceYes = document.getElementById("safeSpaceYes").checked;
+        let safeSpaceNo = document.getElementById("safeSpaceNo").checked;
+        let adoptionReason = document.getElementById("adoptionReason").value;
+
+        // Validation checks
+        if (!dogName || !ownerName || !birthdate || !gender || !address1 || !address2 || !state || !zipCode || !contactNo || !email || !adoptionReason || 
+            (!havePetsYes && !havePetsNo) || 
+            (!caredPetsYes && !caredPetsNo) || 
+            (!safeSpaceYes && !safeSpaceNo)) {
+            document.getElementById("errorMessage").textContent = "Please fill out all required fields.";
+            errorPopup.classList.add('show');
+            return false;
+        } else {
+            openPopup();  // Show the success popup if all fields are filled correctly
+            return true;
+        }
+    }
+</script>
+
+</div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            
+            <div class="footer-section-1">
+                <p>Sign up to stay in the loop on adoptable dogs and special updates.</p>
+
+                <form class="signup-form">
+                    <input type="email" id="email" name="email" required placeholder="Email">
+        
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+
+            
+            <div class="footer-section-2">
+                <a href="#" class="logo-footer"><img src="/Pics/logoPuppyPath (1).png" alt=""></a>
+                    <p>
+                        Where paws find homes and hearts find joy                       
+                    </p>
+            </div>
+
+
+
+            <div class="footer-section-3">
+                <i class="ri-instagram-fill"></i>
+                <i class="fab fa-tiktok"></i>
+                <i class="ri-facebook-fill"></i>
+                <p id="adopt-inquire">Adopt Inquiries</p>
+                <p id="surrender-pet">Surrender Inquiries</p>
+                <p id="customer-supp">Customer Support</p>
+                <p id="terms">Terms of Service</p>
+                <p id="policy">Privacy Policy</p>
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Puppy Path. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+
+
+
+</body>
+</html>

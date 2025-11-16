@@ -1,0 +1,665 @@
+@font-face {
+  font-family: 'SourGummy-Bold';
+  src: url('/Fonts/Sour_Gummy/static/SourGummy-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'SourGummy-Light';
+  src: url(/Fonts/Sour_Gummy/static/SourGummy-Light.ttf);
+}
+
+@font-face {
+font-family: 'SourGummy-Medium';
+src: url(/Fonts/Sour_Gummy/static/SourGummy-Medium.ttf);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  margin: 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.topnav {
+  background-color: white;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.10);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+/* Logo style */
+.logo-PuppyPath{
+  height: 50px;
+  width: auto;
+}
+
+.topnav a {
+  display: block;
+  color: #1e4b57;
+  text-align: center;
+  padding: 14px 25px;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "SourGummy-Bold", sans-serif;
+  height: 100%;
+  font-weight: bold;
+  line-height: 2;
+  transition: transform 0.3s ease; /* Para sa smooth transition */
+}
+
+/* Separate style for active link */
+.topnav a.active {
+  background-color: #e42e00;
+  color: #ffffff;
+}
+
+.topnav a.active:hover {
+  color: white;
+}
+
+.dropdown:hover .dropbtn,
+.topnav a:hover:not(.no-hover, #logo, .btnSurrender, .btnAdopt ) {
+  background-color: #e6471f;
+  color: rgb(255, 255, 255);
+  transition: background-color 0.2s ease;
+}
+
+
+/* Dropdown styles */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 14px;
+  border: none;
+  font-weight: bold;
+  outline: none;
+  color: #1e4b57;
+  padding: 14px 16px;
+  background-color: inherit;
+  line-height: 2;
+  height: 100%;
+  transition: transform 0.3s ease; /* Para sa dropdown button */
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px #e42e00a8;
+}
+
+.dropdown-content a {
+  float: none;
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: normal;
+  text-align: left;
+  height: 100%;
+  line-height: 2;  
+  transform: background-color 0.3s ease;
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  transform: scale(1.1);
+  background-color: #e42e00 !important;
+  color: #000000;
+}
+
+.container-adopt-surren {
+  margin-left: 430px;
+  display: flex; /* Arrange child elements in a row */
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center; /* Align items vertically */
+  gap: 10px; /* Add spacing between buttons */
+  margin-top: 0px; /* Add some spacing above */
+}
+
+
+.container-adopt-surren .btnAdopt {
+  position: relative;
+  border: 2px solid #e42e00;
+  background: none;
+  margin-left: 30px;
+  padding: 6px 25px;
+  font-weight: bolder;
+  color: #1e4b57;
+  font-size: 16px;
+  border-radius: 7px;
+  transition: color 0.4s linear;
+  cursor: pointer;
+  z-index: 1010;
+}
+
+.container-adopt-surren .btnAdopt:hover {
+  color: #ffffff;
+}
+
+.container-adopt-surren .btnAdopt::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #e42e00;
+  z-index: -1;
+  transition: transform 1.1s cubic-bezier(0.7, 1.6, 0.4, 0.7);
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.container-adopt-surren .btnAdopt:hover::before {
+  transform: scaleY(1);
+}
+
+.container-adopt-surren .btnSurrender {
+  position: relative;
+  border: 2px solid #e42e00;
+  background: none;
+  padding: 6px 9px;
+  font-weight: bolder;
+  color: #1e4b57;
+  font-size: 16px;
+  border-radius: 7px;
+  transition: color 0.4s linear;
+  cursor: pointer;
+  z-index: 1010;
+}
+
+.container-adopt-surren .btnSurrender:hover {
+  color: #ffffff;
+}
+
+.container-adopt-surren .btnSurrender::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #e42e00;
+  z-index: -1;
+  transition: transform 1.1s cubic-bezier(0.7, 1.6, 0.4, 0.7);
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.container-adopt-surren .btnSurrender:hover::before {
+  transform: scaleY(1);
+}
+
+
+.search-icon, 
+.account-icon {
+  display: inline-flex;
+  align-items: center;
+  padding: 0; /* Remove extra padding */
+  margin: 0;
+}
+
+.account-icon {
+  margin-left: -10px; /* Adjust to control the spacing */
+  margin-right: -5px;
+}
+
+.search-icon a, .account-icon a {
+  display: flex;
+  align-items: center;
+}
+
+
+.search-icon a i,
+.account-icon a i {
+  transition: all 0.3s linear;
+}
+
+
+.search-icon a:hover i,
+.account-icon a:hover i {
+  transform: scale(1.5);
+}
+
+
+.faqs-container {
+  padding: 20px;
+
+}
+
+.faq-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.faq-columns {
+  display: flex;
+  justify-content: space-between;  /* Ensures space between columns */
+  gap: 20px;  /* Adds gap between the columns */
+  margin-top: 40px;
+}
+
+.faq-column {
+  width: 45%;  /* Ensure both columns have equal width */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-row {
+  margin-bottom: 20px;
+}
+
+/* Initially hide the answers */
+.answer {
+  display: none;
+}
+
+/* Show answer when the .show class is added */
+.answer.show {
+  display: block;
+}
+
+/* Style for the show-answer button */
+.show-answer {
+  background-color: orangered;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: sourGummy-Light, sans-serif;
+}
+
+.show-answer.active {
+  background-color: orangered;
+}
+
+
+
+.faq-title {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 70%; /* Optional: Restricts the width for better alignment */
+}
+
+.faq-title h1 {
+  font-family: Arial, sans-serif;
+  color: orangered;
+  font-size: 4em; /* Adjust the font size as needed */
+  margin: 0; /* Remove extra margin around the heading */
+  font-family: sourGummy-Bold, sans-serif;
+}
+
+/* Style for the banner */
+.banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Ensures that the image doesn't overflow out of the container */
+}
+
+.banner img {
+  width: 35%; /* Keep the width as 30% of the container */
+  height: 100%; /* Ensure the image takes up the full height of the container */
+  object-fit: cover; /* Ensures the image covers the div without distortion */
+  object-position: left bottom; /* Ensures the image is aligned to the bottom-left */
+  padding: 30px;
+  margin-left: 0; /* Aligns the image to the left */
+  display: block; /* Removes any extra space under the image */
+}
+
+/* Style for the banner text */
+.banner-text {
+  position: absolute;
+  top: 46%;
+  left: 18%;
+  height: 20px;
+  transform: translate(-50%, -50%); /* Center the text both horizontally and vertically */
+  font-size: 1.3rem;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  text-align: left;
+  font-family: sourGummy-Bold, sans-serif;
+}
+
+h3 {
+  margin: 0; /* Remove default margin */
+  font-size: 1.6rem;  /* Adjust font size as needed */
+}
+
+.faq-columns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 6px;
+}
+
+.faq-column {
+  width: 45%;  /* Ensure both columns have equal width */
+  background-size: cover;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.faq-column h3 {
+  color: black;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  border-bottom: 3px solid black; /* Line under the question */
+  padding-bottom: 10px; /* Space between text and line */
+  font-family: sourGummy-Light, sans-serif;
+
+}
+
+.faq-column p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-top: 2px solid white; /* Horizontal line before the answer */
+  padding-top: 10px; /* Space between the line and the answer */
+}
+
+.faq-row {
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgb(90, 56, 56);
+}
+
+
+p.answer {
+  color: red;
+  font-style: italic;
+  font-size: 1.2rem;
+  font-family: sourGummy-Light, sans-serif;
+}
+
+p + p {
+  margin-top: 10px;
+}
+
+/* Dog Image Overlay Styling */
+.dog_overlay {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 10;  /* Ensure it appears on top of other content */
+  max-width: 70%; /* Prevents the overlay from exceeding container width */
+  overflow: hidden; /* Ensures no horizontal scroll */
+}
+
+/* Style for the image inside the overlay */
+.dog_overlay img {
+  width: 100%;  /* Make the image responsive and fit within the container */
+  max-width: 37%;  /* Limits the width of the image */
+  height: auto;  /* Keeps aspect ratio */
+  border-radius: 8px;  /* Optional: add border-radius for rounded corners */
+  margin-left: 70%;
+  opacity:0.8;
+}
+
+
+
+
+
+
+
+.footer{
+position: absolute;
+width: 100%;
+height: auto;
+background-color: white;
+color: black;
+text-align: center;
+border-top: 5px solid #e42e00;
+}
+
+.footer-content {
+display: flex;
+align-items: center;
+max-width: 1200px;
+margin: 0; 
+}
+
+.footer-section-1{
+margin: 50px 0px 0px 66px;
+font-size: 14px;
+font-family: sourgummy-Light;
+color: orangered;
+font-weight: bolder;
+}
+
+.footer form{
+display: flex;
+align-items: center;
+}
+
+.footer form input{
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+width: 80%;
+margin: 11px 5px 11px 0px;
+transition: border-color 0.3s ease;
+}
+.footer form input:focus{
+border: .5px solid #000000;
+outline: none;
+}
+
+.footer form button{
+border: 0px solid #ccc;
+border-radius: 5px;
+padding: 11px 10px 11px 10px;
+background-color: #e42e0093;
+color: white;
+font-family: 'SourGummy-Light';
+letter-spacing: 2px;
+transition: transform 0.3s ease;
+}
+.footer form button:active{
+transform: scale(0.95); 
+}
+
+
+.footer-section-2{
+margin: 0px 30px 0px 136px;
+font-family: sourgummy-Light;
+}
+
+.footer-section-2 .logo-footer img{
+height: 100px;
+width: auto;
+}
+.footer-section-2 p{
+text-align: center;
+font-size: 14px;
+line-height: 1.5;
+font-weight: bold;
+color: orangered;
+}
+
+
+.footer-section-3{
+margin: 20px 0px 0px 110px;
+font-size: 12px;
+}
+
+.footer-section-3  i{
+font-size: 25px;
+color: grey;
+cursor: pointer;
+letter-spacing: 13px;
+transition: color 0.2s ease, font-weight 0.2s ease;
+margin-bottom: 2px;
+}
+
+.footer-section-3 .fa-tiktok{
+font-size: 22px;
+transform: translateY(-4px);
+margin-left: 3px;
+}
+
+.ri-instagram-fill{
+margin-left: 18px;
+}
+
+
+.footer-section-3 i:hover{
+font-weight: bolder;
+color: orangered;
+}
+
+.footer-section-3 p{
+font-size: 14px;
+font-weight: bold;
+color: grey;
+line-height: 1.6;
+cursor: pointer;
+letter-spacing: 1px;
+transition: color 0.2s ease, font-weight 0.2s ease;
+font-family: SourGummy-Light;
+}
+
+.footer-section-3 p:hover{
+font-weight: bolder;
+color: orangered; 
+}
+
+.footer-bottom {
+margin: none;
+text-align: center;
+font-size: 12px;
+margin-left: 76px;
+margin-bottom: 10px;
+font-family: SourGummy-Light;
+font-weight: bold;
+
+}
+
+
+.highlight{
+  color: #e42e00;
+  font-weight: bold;
+}
+
+.donate-content{
+  border-bottom: 2px solid #d42e05;
+}
+
+.dog-wallpaper{
+  width: 100%;
+  max-width: 750px;
+  height: 100%;
+  max-height: 430px;
+  display: block;
+}
+
+.donate-text-title{
+  position: absolute;
+  top: 110px;
+  right: 70px;
+  font-size: 3em;
+  color: #e42e00;
+  font-family: SourGummy-Bold, sans-serif;
+}
+
+.donate-text-p{
+  position: absolute;
+  top: 200px;
+  right: 1%;
+  font-size: 1.7em;
+  font-family: SourGummy-Light, sans-serif;
+}
+
+
+.e-bank-container{
+  padding-top: 40px;
+  padding-bottom: 50px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: rgb(236, 236, 189);
+} 
+
+.choose-bank{
+  font-size: 36px;
+  padding-bottom: 20px;
+  font-family: 'SourGummy-Bold';
+  letter-spacing: 2px;
+  color: #e42e00;
+}
+
+
+.e-bank-container .image-container{
+  display: inline;
+}
+
+.image-container img{
+  max-width: 200px;
+  filter: brightness(70%);
+  transition: filter .20s;
+  cursor: pointer;
+  margin: 0 14px 0 14px;
+}
+
+.image-container img:hover{
+  filter: brightness(140%);
+}
+
+  #gcash{
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: -16px;
+    margin-left: -10px;
+
+  }
+  #paymaya{
+    width: 100%;
+    max-width: 180px;
+  }
+  #unionbank{
+    width: 100%;
+    max-width: 200px;
+  }
+  #bdo{
+    width: 100%;
+    max-width: 80px;
+    margin-bottom: 16px;
+  }
+  #bpi{
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: -8px;
+  }

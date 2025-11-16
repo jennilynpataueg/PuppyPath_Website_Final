@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppy Path</title>
+    <link rel="shortcut icon" type="x-icon" href="/Pics/logoPuppyPath (1).png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="/CSS/surrender-form.css">
+
+</head>
+<body>
+    
+    <header>
+        <nav class="topnav">
+            <a href="#" class="no-hover">
+            <img src="/Pics/logo-text (1).png" alt="Logo" class="logo-PuppyPath">
+            </a>
+        <a class="active" href="homepage.html"><i class="fas fa-home"></i> Home</a>
+        
+
+        
+        <a href="/HTML/donate.html"><i class="fa fa-heart"></i> Donate</a>
+        <a href="/HTML/faqs.html"> <i class="fas fa-question-circle"></i> FAQs</a>
+
+
+
+        <script>
+            // Get all nav links
+            const navLinks = document.querySelectorAll('.topnav a');
+        
+            // Get the current page's pathname
+            const currentPage = window.location.pathname;
+        
+            // Remove and add the active class dynamically
+            navLinks.forEach(link => {
+                // Compare link href with the current page
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        </script>
+           
+
+
+        <div class="container-adopt-surren">
+            <a href="/HTML/dogs-selection.html" class="btnAdopt btn1">Adopt</a>
+            <a href="#surrender" class="btnSurrender btn2">Surrender</a>
+        </div>
+
+        <div class="search-icon">
+            <a href="#search" class="search-icon no-hover"><i class="fas fa-search"></i></a>
+        </div>
+
+        <div class="account-icon">
+            <a href="login.html" class="account-icon no-hover"><i class="fas fa-user-circle"></i></a>
+        </div>
+
+    </nav>
+</header>
+
+
+    <div class="form-content">
+        <div>
+            <table class="surrender-form">
+                    <h3 class="title-surrender-Form">Puppy Path Surrender Form</h3>
+                        <tr>
+                            <td colspan="2">
+                                <p>Owner's Full Name: </p>
+                                <input type="text" placeholder="Enter your full name">
+                            </td>
+                        </tr>
+
+                        <tr> 
+                            <td>
+                                <p>Owner's Birthdate:</p>
+                                <label for="date"></label>
+                                <input type="date" name="date">
+                            </td>
+                            <td>
+                                <p>Gender</p>
+                                <label for="gender"></label>
+                                <select id="gender" name="gender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>Address</p>
+                                <input type="text" placeholder="House No./Street/Barangay"> <br>
+                                <input type="text" placeholder="City">
+                            </td>
+
+                            <td>
+                                <p><br></p>
+                                <input type="text" placeholder="State/Province"> <br>
+                                <input type="text" placeholder="Zip Code">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>Contact No.</p>
+                                <input type="number" placeholder="Type here...">
+                            </td>
+
+                            <td>
+                                <p>Email Address</p>
+                                <input type="email" placeholder="Type here...">
+                            </td>
+                        </tr>
+
+                        <tr> 
+                            <td colspan="2"> <h3 class="dog-info-h3">Dog's information</h3>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2"> 
+                                <p>Name of the dog you wish to surrender (optional):</p> 
+                                <input type="text" placeholder="Enter dog's name">
+                            </td>
+                        </tr>
+
+                        <tr> 
+                            <td>
+                                <p>Dog's Age:</p>
+                                <input type="text" placeholder="Type here...">
+                            </td>
+                            <td>
+                                <p>Dog's Gender</p>
+                                <label for="gender"></label>
+                                <select id="gender" name="gender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                </select>
+                            </td>
+                        </tr>
+            </table>
+
+            <div class="dog-info-special">
+                <p>Does the dog has a special condition? (if yes, please specify)</p>
+                <input type="radio" name="choice0" value="yes"> <label for="yes">Yes</label>
+                <input type="radio" name="choice0" value="no"> <label for="yes">No</label>
+                    <div class="special-input">
+                        <input type="text" placeholder="Type here...">
+                    </div>
+            </div>
+
+
+            <div style="display: flex; gap: 26px; align-items: center;">
+                <div class="dog-info-vaccineNeutere">
+                    <p>Is the dog vaccinated?</p>
+                    <input type="radio" name="choice1" value="yes"> <label for="yes">Yes</label>
+                    <input type="radio" name="choice1" value="no"> <label for="yes">No</label>
+                </div>
+
+                <div class="dog-info-vaccineNeutere">
+                    <p>Is the dog neutered?</p>
+                    <input type="radio" name="choice2" value="yes"> <label for="yes">Yes</label>
+                    <input type="radio" name="choice2" value="no"> <label for="yes">No</label>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+
+       
+       
+        <div class="vl"></div>
+
+
+
+
+
+            <div class="questionnaire-B">
+                <h3 class="questions-below">Kindly Answer the Questions below</h3>
+            
+                    <div>
+                        <p>1. Are you surrendering your dog because of a change in your personal circumstances? </p>
+                        <input type="radio" name="choice3" value="yes"> <label for="yes">Yes</label>
+                        <input type="radio" name="choice3" value="no"> <label for="yes">No</label>
+                        <textarea placeholder="Type here..."></textarea>
+                    </div>
+                
+                    <div style="display: flex; gap: 22px; align-items: center;">
+                        <div>
+                            <p>2. Are you no longer able to care for your dog due to financial difficulties?</p>
+                            <input type="radio" name="choice4" value="yes"> <label for="yes">Yes</label>
+                            <input type="radio" name="choice4" value="no"> <label for="yes">No</label>
+                        </div>
+                    
+                        <div>
+                            <p class="number3">3. How long have you cared for your dog before deciding to surrender?</p>
+                            <input type="text" class="surrender-num3" placeholder="Type here...">
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <p>4. Can the Puppy Pathners know the reason you're surrendering the dog to us? (optional)</p>
+                        <textarea placeholder="Type here..."></textarea>
+                    </div>
+
+                    <div>
+                        <p>5. Does your dog have any behavioral issues we should know about?</p>
+                        <input type="radio" name="choice3" value="yes"> <label for="yes">Yes</label>
+                        <input type="radio" name="choice3" value="no"> <label for="yes">No</label>
+                        <textarea placeholder="Type here..."></textarea>
+                    </div>
+
+                    <div>
+                        <p>6. Is there anything you'd like us to know about your dog to help find the best home? (Optional)
+                            If yes, please describe:</p>
+                        <textarea placeholder="Type here..."></textarea>
+                    </div>
+
+                <div class="submission-bin">
+                    <p class="upload-latest">7. Please upload a latest picture of the dog. </p>
+                    <label for="input-file" id="drop-area">
+                        <input type="file" accept="image/*" id="input-file" hidden>
+                        <div id="img-view">
+                            <img src="/Pics/icon-cloud.png">
+                            <p class="upload-image">Click here to Upload image</p>
+                            <span>Upload any images from desktop</span>
+                        </div>
+                    </label>
+                </div>
+                
+                
+
+                <div class="container-submit">
+                    <button type="submit" class="sbmtAdopt btn3" onclick="openPopup()">Submit</button>
+                </div>
+
+            </div>
+
+            <div class="thankYou" id="popup">
+                <img src="/Pics/logoPuppyPath (1).png">
+                <h1>Thank you!</h1>
+                <p>Your pet is safe and in good hands!</p>
+                <a href="/HTML/homepage.html" onclick="closePopup()">Okay</a>
+            </div>
+            
+            <script>
+                let popup = document.getElementById("popup");
+            
+                function openPopup() {
+                    popup.classList.add('show');
+                }
+            
+                function closePopup() {
+                    popup.classList.remove('show');
+                }
+            </script>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            
+            <div class="footer-section-1">
+                <p>Sign up to stay in the loop on adoptable dogs and special updates.</p>
+
+                <form class="signup-form">
+                    <input type="email" id="email" name="email" required placeholder="Email">
+        
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+
+            
+            <div class="footer-section-2">
+                <a href="#" class="logo-footer"><img src="/Pics/logoPuppyPath (1).png" alt=""></a>
+                    <p>
+                        Where paws find homes and hearts find joy                       
+                    </p>
+            </div>
+
+
+
+            <div class="footer-section-3">
+                <i class="ri-instagram-fill"></i>
+                <i class="fab fa-tiktok"></i>
+                <i class="ri-facebook-fill"></i>
+                <p id="adopt-inquire">Adopt Inquiries</p>
+                <p id="surrender-pet">Surrender Inquiries</p>
+                <p id="customer-supp">Customer Support</p>
+                <p id="terms">Terms of Service</p>
+                <p id="policy">Privacy Policy</p>
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Puppy Path. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+
+<script src="/JAVASCRIPT/submissionBin.js"></script>
+
+</body>
+</html>

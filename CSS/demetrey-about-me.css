@@ -1,0 +1,470 @@
+@font-face {
+  font-family: 'SourGummy-Bold';
+  src: url('/Fonts/Sour_Gummy/static/SourGummy-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'SourGummy-Light';
+  src: url(/Fonts/Sour_Gummy/static/SourGummy-Light.ttf);
+}
+
+@font-face {
+font-family: 'SourGummy-Medium';
+src: url(/Fonts/Sour_Gummy/static/SourGummy-Medium.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1ded9;
+}
+
+header{
+    margin: 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.topnav {
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.10);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+/* Logo style */
+.logo-PuppyPath {
+    height: 50px;
+    width: auto;
+    pointer-events: none;
+}
+
+/* General link style */
+.topnav a {
+    display: block;
+    color: #1e4b57;
+    text-align: center;
+    padding: 14px 25px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "SourGummy-Bold", sans-serif;
+    height: 100%;
+    font-weight: bold;
+    line-height: 2;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover style for all links */
+.topnav a:hover:not(.no-hover, .btnSurrender, .btnAdopt){
+    background-color: #e42e00;
+    color: white; /* Ensure text is readable */
+}
+
+/* Style for active link */
+.topnav a.active {
+    background-color: #e42e00;
+    color: #ffffff;
+}
+
+/* Allow hover effect on the active link */
+.topnav a.active:hover {
+    background-color: #d12800; /* Slightly darker hover effect */
+    color: #ffffff; /* Keep text white */
+}
+
+
+.container-adopt-surren {
+    margin-left: 430px;
+    display: flex; /* Arrange child elements in a row */
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Add spacing between buttons */
+    margin-top: 0px; /* Add some spacing above */
+}
+
+.container-submit {
+  margin-left: 270px;
+  padding-top: 30px;
+}
+
+.container-submit .sbmtAdopt{
+  border: 2px solid #e42e00;
+  background: none;
+  text-decoration: none;
+  padding: 14px 22px;
+  font-weight: 500;
+  color: #1e4b57;
+  font-size: 20px;
+  border-radius: 7px;
+  transition: background-color 0.9s ease, color 0.7s ease, box-shadow 0.9s ease;;
+  cursor: pointer;
+  font-family: SourGummy-light;
+}
+
+.container-submit .sbmtAdopt:hover{
+  color: #ffffff;
+  background-color: #e42e00;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.712);
+  font-weight: 900;
+}
+
+.container-adopt-surren .btnAdopt {
+    position: relative;
+    border: 2px solid #e42e00;
+    background: none;
+    margin-left: 30px;
+    padding: 6px 25px;
+    font-weight: bolder;
+    color: #1e4b57;
+    font-size: 16px;
+    border-radius: 7px;
+    transition: color 0.4s linear;
+    cursor: pointer;
+    z-index: 1010;
+}
+
+.container-adopt-surren .btnAdopt:hover {
+    color: #ffffff;
+}
+
+.container-adopt-surren .btnAdopt::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #e42e00;
+    z-index: -1;
+    transition: transform 1.1s cubic-bezier(0.7, 1.6, 0.4, 0.7);
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.container-adopt-surren .btnAdopt:hover::before {
+    transform: scaleY(1);
+}
+
+.container-adopt-surren .btnSurrender {
+    position: relative;
+    border: 2px solid #e42e00;
+    background: none;
+    padding: 6px 9px;
+    font-weight: bolder;
+    color: #1e4b57;
+    font-size: 16px;
+    border-radius: 7px;
+    transition: color 0.4s linear;
+    cursor: pointer;
+    z-index: 1010;
+}
+
+.container-adopt-surren .btnSurrender:hover {
+    color: #ffffff;
+}
+
+.container-adopt-surren .btnSurrender::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #e42e00;
+    z-index: -1;
+    transition: transform 1.1s cubic-bezier(0.7, 1.6, 0.4, 0.7);
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.container-adopt-surren .btnSurrender:hover::before {
+    transform: scaleY(1);
+}
+
+
+.search-icon, 
+.account-icon {
+    display: inline-flex;
+    align-items: center;
+    padding: 0; /* Remove extra padding */
+    margin: 0;
+}
+
+.account-icon {
+    margin-left: -10px; /* Adjust to control the spacing */
+    margin-right: -5px;
+}
+
+.search-icon a, .account-icon a {
+    display: flex;
+    align-items: center;
+}
+
+
+.search-icon a i,
+.account-icon a i {
+    transition: all 0.3s linear;
+}
+
+
+.search-icon a:hover i,
+.account-icon a:hover i {
+    transform: scale(1.5);
+}
+
+
+
+.footer{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-top: 5px solid #e42e00;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0; 
+}
+
+.footer-section-1{
+  margin: 50px 0px 0px 66px;
+  font-size: 14px;
+  font-family: sourgummy-Light;
+  color: orangered;
+  font-weight: bolder;
+}
+
+.footer form{
+  display: flex;
+  align-items: center;
+}
+
+.footer form input{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 80%;
+  margin: 11px 5px 11px 0px;
+  transition: border-color 0.3s ease;
+}
+.footer form input:focus{
+  border: .5px solid #000000;
+  outline: none;
+}
+
+.footer form button{
+  border: 0px solid #ccc;
+  border-radius: 5px;
+  padding: 11px 10px 11px 10px;
+  background-color: #e42e0093;
+  color: white;
+  font-family: 'SourGummy-Light';
+  letter-spacing: 2px;
+  transition: transform 0.3s ease;
+}
+.footer form button:active{
+  transform: scale(0.95); 
+}
+
+
+.footer-section-2{
+  margin: 0px 30px 0px 136px;
+  font-family: sourgummy-Light;
+}
+
+.footer-section-2 .logo-footer img{
+  height: 100px;
+  width: auto;
+}
+.footer-section-2 p{
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: bold;
+  color: orangered;
+}
+
+
+.footer-section-3{
+  margin: 20px 0px 0px 110px;
+  font-size: 12px;
+}
+
+.footer-section-3  i{
+  font-size: 25px;
+  color: grey;
+  cursor: pointer;
+  letter-spacing: 13px;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+  margin-bottom: 2px;
+}
+
+.footer-section-3 .fa-tiktok{
+  font-size: 22px;
+  transform: translateY(-4px);
+  margin-left: 3px;
+}
+
+.ri-instagram-fill{
+  margin-left: 18px;
+}
+
+
+.footer-section-3 i:hover{
+  font-weight: bolder;
+  color: orangered;
+}
+
+.footer-section-3 p{
+  font-size: 14px;
+  font-weight: bold;
+  color: grey;
+  line-height: 2.4;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+  font-family: SourGummy-Light;
+}
+
+.footer-section-3 p:hover{
+  font-weight: bolder;
+  color: orangered; 
+}
+
+.footer-bottom {
+  margin: none;
+  text-align: center;
+  font-size: 12px;
+  margin-left: 76px;
+  margin-bottom: 10px;
+  font-family: SourGummy-Light;
+  font-weight: bold;
+
+}
+
+
+
+.profile-container {
+  margin-left: 240px;
+  width: 100%;
+  height: auto;
+  max-width: 900px;
+  background-color: #f1ded9;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background-color: #f9d3c4;
+  overflow: hidden;
+  margin: 0 15px ;
+}
+
+.dog-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.3);
+  width: 280px;
+  height: auto;
+}
+
+.dog-info {
+  margin-bottom: 10px;
+  font-family: sourGummy-Light, sans-serif;
+}
+
+.dog-name {
+  color: #e42e00;
+  font-size: 34px;
+  font-family: sourGummy-Bold, sans-serif;
+}
+
+
+.adopt-btn {
+  position: relative;
+  left: 140px;
+  top: 5px;
+  background: none; 
+  border: 2px solid #e42e00; 
+  color: #1e4b57; 
+  padding: 10px 25px; 
+  font-size: 18px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: all 0.3s ease;
+  text-decoration: none; 
+  display: inline-block;
+  font-weight: 600;
+}
+
+.adopt-btn:hover {
+  background-color: #e42e00;
+  color: white;
+  transform: scale(1.05);
+  font-weight: bolder;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.514);
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  margin-top: 20px;
+  gap: 20px;
+  font-family: sourGummy-Light, sans-serif;
+
+}
+
+.detail-section {
+  width: 40%;
+  background-color: #fdf8f6;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.detail-section h3 {
+  color: #e42e00;
+  font-size: 26px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #f9c4a3;
+  padding-bottom: 5px;
+}
+
+.detail-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #1e4b57; 
+}
+
+.detail-section li {
+  font-size: 18px;
+  margin-bottom: 5px;
+} 

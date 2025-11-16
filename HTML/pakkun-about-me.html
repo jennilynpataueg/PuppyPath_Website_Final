@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppy Path</title>
+    <link rel="shortcut icon" type="x-icon" href="/Pics/logoPuppyPath (1).png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="/CSS/pakkun-about-me.css">
+
+</head>
+<body>
+    
+    <header>
+        <nav class="topnav">
+            <a href="#" class="no-hover">
+            <img src="/Pics/logo-text (1).png" alt="Logo" class="logo-PuppyPath">
+            </a>
+        <a class="active" href="homepage.html"><i class="fas fa-home"></i> Home</a>
+        
+    <!--    <div class="dropdown">
+            <button class="dropbtn"> Age Categories <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#puppies" class="no-active">Puppies</a>
+                <a href="#adultDogs" class="no-active">Adult Dogs</a>
+                <a href="#seniorDogs" class="no-active">Senior Dogs</a>
+            </div>
+        </div> 
+    -->
+        
+        <a href="/HTML/donate.html"><i class="fa fa-heart"></i> Donate</a>
+        <a href="/HTML/faqs.html"> <i class="fas fa-question-circle"></i> FAQs</a>
+
+
+
+        <script>
+            // Get all nav links
+            const navLinks = document.querySelectorAll('.topnav a');
+        
+            // Get the current page's pathname
+            const currentPage = window.location.pathname;
+        
+            // Remove and add the active class dynamically
+            navLinks.forEach(link => {
+                // Compare link href with the current page
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        </script>
+           
+
+
+        <div class="container-adopt-surren">
+            <a href="#adopt" class="btnAdopt btn1">Adopt</a>
+            <a href="/HTML/surrender-form.html" class="btnSurrender btn2">Surrender</a>
+        </div>
+
+        <div class="search-icon">
+            <a href="#search" class="search-icon no-hover"><i class="fas fa-search"></i></a>
+        </div>
+
+        <div class="account-icon">
+            <a href="login.html" class="account-icon no-hover"><i class="fas fa-user-circle"></i></a>
+        </div>
+
+    </nav>
+</header>
+
+
+
+
+
+
+<div class="profile-container">
+    <div class="image-wrapper">
+        <img src="/Pics/Pakkun.png" alt="Pakun" class="dog-image">
+    </div>
+    
+    <div class="dog-info">
+        <h2>Hi I'm <span class="dog-name">Pakkun!</span></h2>
+        <a href="/HTML/adopt-form.html" class="adopt-btn">Adopt me!</a>
+    </div>
+
+    <div class="details">
+        <div class="detail-section">
+            <h3>Profile:</h3>
+            <ul>
+                <li><strong>I'm 5 years old</strong></li>
+                <li><strong>I'm a Male</strong></li>
+                <li><strong>I'm a Corgi</strong></li>
+            </ul>
+        </div>
+
+        <div class="detail-section">
+            <h3>Medical:</h3>
+            <ul>
+                <li>Vaccination Status: <strong>Vaccinated</strong></li>
+                <li>Neutering Status: <strong>Neutered</strong></li>
+                <li>Special Conditions: <strong>None</strong></li>
+            </ul>
+        </div>
+
+        <div class="detail-section">
+            <h3>Personality:</h3>
+            <ul>
+                <li>I'm <strong>Energetic</strong></li>
+                <li>I'm also <strong>Playful</strong></li>
+                <li>I'm <strong>very kind with people</strong></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            
+            <div class="footer-section-1">
+                <p>Sign up to stay in the loop on adoptable dogs and special updates.</p>
+
+                <form class="signup-form">
+                    <input type="email" id="email" name="email" required placeholder="Email">
+        
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+
+            
+            <div class="footer-section-2">
+                <a href="#" class="logo-footer"><img src="/Pics/logoPuppyPath (1).png" alt=""></a>
+                    <p>
+                        Where paws find homes and hearts find joy                       
+                    </p>
+            </div>
+
+
+
+            <div class="footer-section-3">
+                <i class="ri-instagram-fill"></i>
+                <i class="fab fa-tiktok"></i>
+                <i class="ri-facebook-fill"></i>
+                <p id="adopt-inquire">Adopt Inquiries</p>
+                <p id="surrender-pet">Surrender Inquiries</p>
+                <p id="customer-supp">Customer Support</p>
+                <p id="terms">Terms of Service</p>
+                <p id="policy">Privacy Policy</p>
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Puppy Path. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+
+
+
+</body>
+</html>
